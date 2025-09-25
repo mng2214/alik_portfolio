@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. First Last Name | Premier Chiropractic & Spinal Health Specialist</title>
+    <meta name="description" content="Renowned chiropractor providing exceptional spinal care through advanced techniques and personalized treatment plans. Restoring mobility and quality of life.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --off-white: #F9FAFC;
+            --light-gray: #E8ECEF;
+            --medium-gray: #8A94A6;
+            --dark-gray: #3A3D42;
+            --navy: #1A3A5F;
+            --navy-dark: #0F2A4A;
+            --accent: #3D8BCC;
+            --accent-light: #5BA3E3;
+            --gold: #C9A96C;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.1);
+            --border-radius: 12px;
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark-gray);
+            line-height: 1.7;
+            background-color: var(--white);
+            overflow-x: hidden;
+            font-weight: 400;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        section {
+            padding: 120px 0;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 25px;
+            color: var(--navy);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            display: inline-block;
+        }
+
+        h1:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold) 0%, transparent 100%);
+            border-radius: 2px;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+        }
+
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold) 0%, var(--accent) 100%);
+            border-radius: 2px;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+        }
+
+        h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+            color: var(--medium-gray);
+            line-height: 1.8;
+        }
+
+        .lead {
+            font-size: 1.3rem;
+            color: var(--dark-gray);
+            font-weight: 400;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+            transition: left 0.4s ease;
+            z-index: -1;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn:hover:before {
+            left: 0;
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+        }
+
+        .btn-whatsapp:before {
+            background: linear-gradient(135deg, #128C7E 0%, #0A6E5E 100%);
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            box-shadow: 0 2px 30px rgba(0, 0, 0, 0.06);
+            transition: var(--transition);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+        }
+
+        header.scrolled {
+            padding: 5px 0;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            transition: var(--transition);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--navy);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--accent) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--dark-gray);
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            padding: 5px 0;
+            font-size: 1.05rem;
+        }
+
+        nav a:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        nav a:hover:after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark-gray);
+            z-index: 1001;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 200px 0 120px;
+            background: linear-gradient(135deg, var(--off-white) 0%, var(--white) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: -300px;
+            right: -200px;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(61, 139, 204, 0.08) 0%, transparent 70%);
+            z-index: 0;
+        }
+
+        .hero:after {
+            content: '';
+            position: absolute;
+            bottom: -300px;
+            left: -200px;
+            width: 700px;
+            height: 700px;
+            background: radial-gradient(circle, rgba(201, 169, 108, 0.05) 0%, transparent 70%);
+            z-index: 0;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text p.lead {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            max-width: 550px;
+            color: var(--dark-gray);
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(135deg, var(--light-gray) 0%, var(--off-white) 100%);
+            border-radius: var(--border-radius);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--medium-gray);
+            font-size: 1.2rem;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .image-placeholder:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .image-placeholder:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M20,20 L80,80" stroke="%231A3A5F" stroke-width="0.3" opacity="0.1"/></svg>');
+        }
+
+        .image-placeholder i {
+            font-size: 4rem;
+            color: var(--accent);
+            margin-bottom: 20px;
+            z-index: 1;
+        }
+
+        /* About Section */
+        .about {
+            background-color: var(--white);
+            position: relative;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+        }
+
+        .about-text {
+            flex: 2;
+        }
+
+        .about-highlight {
+            background: linear-gradient(135deg, var(--off-white) 0%, var(--light-gray) 100%);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            margin: 40px 0;
+            font-style: italic;
+            position: relative;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--gold);
+            font-size: 1.2rem;
+            color: var(--navy);
+        }
+
+        .about-highlight:before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 5rem;
+            color: var(--gold);
+            opacity: 0.3;
+            font-family: serif;
+        }
+
+        .about-facts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .fact-item {
+            text-align: center;
+            padding: 40px 30px;
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.03);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fact-item:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent) 0%, var(--gold) 100%);
+        }
+
+        .fact-item:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .fact-icon {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Services Section */
+        .services {
+            background: linear-gradient(135deg, var(--off-white) 0%, var(--light-gray) 100%);
+            position: relative;
+        }
+
+        .services:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0,50 Q50,30 100,50 Q50,70 0,50" stroke="%233D8BCC" stroke-width="0.5" opacity="0.05" fill="none"/></svg>');
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            padding: 50px 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent) 0%, var(--gold) 100%);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            color: var(--accent);
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--white);
+            position: relative;
+        }
+
+        .testimonials:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, var(--light-gray) 0%, transparent 70%);
+            opacity: 0.3;
+            z-index: 0;
+        }
+
+        .testimonials-slider {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            padding: 20px 10px;
+            scrollbar-width: none;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonials-slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        .testimonial-card {
+            min-width: 380px;
+            background-color: var(--white);
+            padding: 40px 35px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            position: relative;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .testimonial-card:before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 25px;
+            font-size: 5rem;
+            color: var(--gold);
+            opacity: 0.2;
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            margin-top: 25px;
+        }
+
+        .author-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--navy) 100%);
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+
+        /* Contacts Section */
+        .contacts {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+            color: var(--white);
+        }
+
+        .contacts h2 {
+            color: var(--white);
+        }
+
+        .contacts h2:after {
+            background: linear-gradient(90deg, var(--gold) 0%, var(--accent-light) 100%);
+        }
+
+        .contacts-content {
+            display: flex;
+            gap: 60px;
+        }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-info h3 {
+            color: var(--white);
+        }
+
+        .contact-details {
+            margin: 40px 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.08);
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-item:hover {
+            transform: translateX(10px);
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .contact-icon {
+            margin-right: 20px;
+            font-size: 1.8rem;
+            color: var(--gold);
+            width: 50px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .contact-item p {
+            color: rgba(255, 255, 255, 0.9);
+            margin: 0;
+        }
+
+        .map-container {
+            flex: 1;
+            height: 450px;
+            background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .map-container:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M30,30 L70,70" stroke="%23C9A96C" stroke-width="0.5" opacity="0.1"/></svg>');
+        }
+
+        .map-container i {
+            font-size: 3.5rem;
+            color: var(--gold);
+            z-index: 1;
+            opacity: 0.7;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--dark-gray) 0%, #2A2D32 100%);
+            color: var(--white);
+            padding: 80px 0 40px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .footer-tagline {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.8;
+            text-align: center;
+        }
+
+        .social-links {
+            margin: 40px 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1.3rem;
+        }
+
+        .social-link:hover {
+            background-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            margin-top: 40px;
+            text-align: center;
+            opacity: 0.7;
+            font-size: 0.95rem;
+            width: 100%;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 5px 25px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            text-decoration: none;
+            transition: var(--transition);
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+            animation: none;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1100px) {
+            h1 {
+                font-size: 3rem;
+            }
+
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.7rem;
+            }
+
+            h2 {
+                font-size: 2.2rem;
+            }
+
+            .hero-content, .about-content, .contacts-content {
+                flex-direction: column;
+            }
+
+            .hero {
+                padding: 180px 0 100px;
+            }
+
+            section {
+                padding: 100px 0;
+            }
+
+            .about-content {
+                gap: 60px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav {
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 80%;
+                height: 100vh;
+                background-color: var(--white);
+                box-shadow: 10px 0 30px rgba(0, 0, 0, 0.1);
+                transition: left 0.4s ease;
+                z-index: 999;
+                padding: 100px 40px 40px;
+            }
+
+            nav.active {
+                left: 0;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            nav li {
+                margin: 0;
+                border-bottom: 1px solid var(--light-gray);
+            }
+
+            nav a {
+                display: block;
+                padding: 15px 0;
+                font-size: 1.2rem;
+            }
+
+            h1 {
+                font-size: 2.4rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+                margin-bottom: 60px;
+            }
+
+            .about-facts {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .testimonial-card {
+                min-width: 300px;
+            }
+
+            .image-placeholder {
+                height: 400px;
+            }
+
+            .contacts-content {
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+
+            .hero {
+                padding: 160px 0 80px;
+            }
+
+            .btn {
+                padding: 14px 30px;
+            }
+
+            .whatsapp-float {
+                bottom: 20px;
+                right: 20px;
+                width: 60px;
+                height: 60px;
+                font-size: 1.8rem;
+            }
+
+            .social-links {
+                gap: 10px;
+            }
+
+            .social-link {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<!-- Header -->
+<header id="header">
+    <div class="container">
+        <div class="header-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-bone"></i>
+                </div>
+                Dr. First Last Name
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contacts">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Excellence in Chiropractic Care</h1>
+                <p class="lead">Renowned specialist providing exceptional spinal health solutions through advanced techniques and personalized treatment plans. Restoring mobility and enhancing quality of life.</p>
+                <a href="https://wa.me/79991234567" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Book a Consultation
+                </a>
+            </div>
+            <div class="hero-image">
+                <div class="image-placeholder">
+                    <i class="fas fa-user-md"></i>
+                    Professional Doctor Photo
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+    <div class="container">
+        <h2>About the Specialist</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Dr. First Last Name</h3>
+                <p>Board-certified chiropractor with over 15 years of dedicated experience in diagnosing and treating complex musculoskeletal conditions. Specializing in evidence-based, non-invasive approaches to spinal health and overall wellness.</p>
+
+                <div class="about-highlight">
+                    "True healing addresses the root cause, not just the symptoms. My mission is to restore your body's innate ability to heal itself through precise, gentle adjustments and comprehensive care."
+                </div>
+
+                <p>My practice is built on a foundation of advanced diagnostic techniques, personalized treatment protocols, and a commitment to exceeding patient expectations. I combine the art of chiropractic with the latest scientific research to deliver exceptional results.</p>
+
+                <div class="about-facts">
+                    <div class="fact-item">
+                        <div class="fact-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h4>Advanced Education</h4>
+                        <p>Doctor of Chiropractic degree with postgraduate certifications in specialized techniques</p>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-icon"><i class="fas fa-certificate"></i></div>
+                        <h4>Board Certified</h4>
+                        <p>Internationally recognized certifications in manual therapy and musculoskeletal rehabilitation</p>
+                    </div>
+                    <div class="fact-item">
+                        <div class="fact-icon"><i class="fas fa-briefcase"></i></div>
+                        <h4>Extensive Experience</h4>
+                        <p>15+ years of clinical practice with thousands of successfully treated patients</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services" id="services">
+    <div class="container">
+        <h2>Specialized Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-search-plus"></i></div>
+                <h3>Comprehensive Diagnostics</h3>
+                <p>Advanced assessment utilizing state-of-the-art diagnostic tools to identify the underlying causes of pain and dysfunction with precision.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-hands-helping"></i></div>
+                <h3>Gentle Spinal Adjustments</h3>
+                <p>Specialized, low-force techniques that restore proper alignment and function without discomfort, tailored to each patient's needs.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-sync-alt"></i></div>
+                <h3>Holistic Rehabilitation</h3>
+                <p>Integrated recovery programs that address not only spinal health but also lifestyle factors for lasting results and improved quality of life.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon"><i class="fas fa-spa"></i></div>
+                <h3>Postural Optimization</h3>
+                <p>Targeted interventions to correct postural imbalances, alleviate chronic pain, and restore natural, efficient body mechanics.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <h2>Patient Experiences</h2>
+        <div class="testimonials-slider">
+            <div class="testimonial-card">
+                <p>"After years of chronic back pain that limited my daily activities, Dr. Last Name provided remarkable relief. His expertise and compassionate approach have truly transformed my quality of life. I'm grateful for the exceptional care."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MK</div>
+                    <div>
+                        <h4>Maria K.</h4>
+                        <p>Patient since 2022</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>"As someone initially skeptical about chiropractic care, Dr. Last Name's professional approach and clear explanations completely changed my perspective. The results have been extraordinary—I've regained mobility I thought was lost forever."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">AS</div>
+                    <div>
+                        <h4>Alexander S.</h4>
+                        <p>Patient since 2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <p>"The comprehensive care I received addressed not just my back pain but also improved my overall well-being. Dr. Last Name's holistic approach and attention to detail are unmatched. I highly recommend his expertise to anyone seeking true relief."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">ED</div>
+                    <div>
+                        <h4>Elena D.</h4>
+                        <p>Patient since 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contacts Section -->
+<section class="contacts" id="contacts">
+    <div class="container">
+        <h2>Schedule Your Consultation</h2>
+        <div class="contacts-content">
+            <div class="contact-info">
+                <h3>Visit Our Practice</h3>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                        <p>123 Health Street, Medical District, City, State 12345</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="fas fa-phone"></i></span>
+                        <p>+1 (111) 123-4567</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="fas fa-clock"></i></span>
+                        <p>Monday-Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 2:00 PM</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                        <p>info@drlastname.com</p>
+                    </div>
+                </div>
+                <a href="https://wa.me/79991234567" class="btn">
+                    <i class="fab fa-whatsapp"></i> Book via WhatsApp
+                </a>
+            </div>
+            <div class="map-container">
+                <i class="fas fa-map"></i>
+                <!-- In a real implementation, you would embed a Google Maps iframe here -->
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo">Dr. First Last Name</div>
+            <p class="footer-tagline">Restoring Health, Renewing Life Through Excellence in Chiropractic Care</p>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2023 Dr. First Last Name. All Rights Reserved. | Designed with Precision for Optimal Health
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/79991234567" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            mainNav.classList.toggle('active');
+            if (mainNav.classList.contains('active')) {
+                mobileMenuBtn.innerHTML = '<i class="fas fa-times"></i>';
+            } else {
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        });
+
+        // Header Scroll Effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    if (mainNav.classList.contains('active')) {
+                        mainNav.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
