@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Landing options</title>
+    <title>Выбор Лендинга</title>
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
@@ -16,60 +16,65 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
+            padding: 20px;
         }
 
         h1 {
-            font-size: 28px;
+            font-size: 26px;
             margin-bottom: 30px;
+            text-align: center;
         }
 
         .options {
             display: flex;
+            flex-direction: row;
             gap: 20px;
             flex-wrap: wrap;
             justify-content: center;
+            width: 100%;
+            max-width: 500px;
         }
 
         .card {
             background-color: #ffffff;
             border: 1px solid #e1e8ef;
             border-radius: 12px;
-            padding: 30px 40px;
+            padding: 25px;
+            width: 100%;
             text-align: center;
-            width: 220px;
             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
         }
 
-        .card a {
-            text-decoration: none;
+        .card h2 {
+            font-size: 20px;
+            margin: 0;
             color: #1b4d70;
-            font-size: 18px;
-            font-weight: 500;
         }
 
-        @media (max-width: 600px) {
+        @media (min-width: 500px) {
             .card {
-                width: 80%;
+                width: 220px;
             }
         }
     </style>
 </head>
 <body>
 
-<h1>Алик тут несколько вариантов лендинга для вас</h1>
+<h1>Выберите вариант лендинга</h1>
 
 <div class="options">
-    <div class="card">
-        <a href="one.html">Вариант 1</a>
+    <div class="card" onclick="window.location.href='one.html'">
+        <h2>Вариант 1</h2>
     </div>
-    <div class="card">
-        <a href="two.html">Вариант 2</a>
+    <div class="card" onclick="window.location.href='two.html'">
+        <h2>Вариант 2</h2>
     </div>
 </div>
 
